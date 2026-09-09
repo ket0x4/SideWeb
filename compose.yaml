@@ -1,0 +1,21 @@
+services:
+  sideweb:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: sideweb:latest
+    container_name: sideweb
+    restart: unless-stopped
+    ports:
+      - "${PORT:-3000}:3000"
+    environment:
+      - PORT=3000
+      - HOST=0.0.0.0
+      - NODE_ENV=production
+    security_opt:
+      - no-new-privileges:true
+    read_only: true
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=64m
+      - /app/.repo_cache:rw,nosuid,size=256m
+      - /app/.repo_downloads:rw,nosuid,size=2g

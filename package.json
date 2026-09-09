@@ -1,0 +1,45 @@
+{
+	"name": "sideweb",
+	"private": true,
+	"version": "1.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc && vite build",
+		"preview": "vite preview",
+		"start": "bun run server.ts",
+		"check": "biome check",
+		"format": "biome format --write"
+	},
+	"dependencies": {
+		"7zip-bin": "^5.2.0",
+		"@yume-chan/adb": "2.6.2",
+		"@yume-chan/adb-credential-web": "2.1.0",
+		"@yume-chan/adb-daemon-webusb": "2.3.2",
+		"@yume-chan/android-bin": "2.1.0",
+		"fflate": "^0.8.3",
+		"lucide-react": "^1.43.0",
+		"react": "^19.2.8",
+		"react-dom": "^19.2.8"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.5.9",
+		"@tailwindcss/vite": "^4.3.3",
+		"@types/bun": "^1.4.2",
+		"@types/node": "^26.5.0",
+		"@types/react": "^19.2.18",
+		"@types/react-dom": "^19.2.7",
+		"@vitejs/plugin-react": "^4.7.0",
+		"tailwindcss": "^4.3.3",
+		"typescript": "^5.9.3",
+		"vite": "^6.4.3"
+	},
+	"overrides": {
+		"nanoid": "^3.3.18"
+	},
+	"knip": {
+		"entry": [
+			"src/**/*.{test,spec}.{ts,tsx}"
+		]
+	}
+}
